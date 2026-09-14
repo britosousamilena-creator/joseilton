@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8ef;
+    color: #3b2418;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #3b2418;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c77b30;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+    animation: aparecer 1s ease;
+}
+
+.hero-text span {
+    color: #c77b30;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #6d5548;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #c77b30;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-5px);
+    background: #a96020;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.hero-img {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #f4d2a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    padding: 90px 8%;
+    background: white;
+    text-align: center;
+}
+
+.produtos h2,
+.sobre h2,
+.contato h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #806b5d;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 280px;
+    padding: 35px 25px;
+    background: #fff8ef;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.icone {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #806b5d;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card strong {
+    color: #c77b30;
+    font-size: 20px;
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 100px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre div:first-child {
+    max-width: 600px;
+}
+
+.sobre p {
+    margin-top: 20px;
+    color: #6d5548;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.caixa {
+    width: 250px;
+    height: 180px;
+    background: #c77b30;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.caixa span {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 90px 20px;
+    text-align: center;
+    background: #3b2418;
+    color: white;
+}
+
+.contato p {
+    margin: 15px 0 30px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #24150f;
+    color: #ddd;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 230px;
+        height: 230px;
+        font-size: 100px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 5%;
+    }
+
+    .caixa {
+        width: 220px;
+        height: 160px;
+    }
+
+    .produtos h2,
+    .sobre h2,
+    .contato h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-img {
+        width: 190px;
+        height: 190px;
+        font-size: 80px;
+    }
+}
